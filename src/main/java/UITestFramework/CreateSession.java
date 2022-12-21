@@ -133,8 +133,8 @@ public class CreateSession  {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "Android Emulator");
 		capabilities.setCapability("platformName","Android");
-		capabilities.setCapability("appPackage", "net.slideshare.mobile");
-		capabilities.setCapability("appActivity", "net.slideshare.mobile.ui.SplashActivity");
+		capabilities.setCapability("appPackage", "com.fampay.in");
+		capabilities.setCapability("appActivity", "com.fampay.in.ui.splash.SplashActivity ");
 		capabilities.setCapability("name", methodName.getName());
 		capabilities.setCapability("app", app.getAbsolutePath());
 		// added "MobileCapabilityType.FULL_RESET" capability to start app in fresh state (logout).
