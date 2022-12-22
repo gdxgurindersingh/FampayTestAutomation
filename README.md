@@ -29,6 +29,7 @@
 
 ## Fampay UI UX Discrepancies
 1. Broken grievance page
+   
    As a fresh face, wining trust of users is most important. A platform for grievance redressal plays a pivotal role in resolving issues faced by customers quickly and creates trust on brand
 
 ![image](UIAutomation/defectVideo/GrievanceRedressalPolicy.gif)
