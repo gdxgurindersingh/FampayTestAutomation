@@ -29,12 +29,12 @@
 
 ## Fampay UI UX Discrepancies
 1. Broken grievance page
-   
-   As a fresh face, wining trust of users is most important. A platform for grievance redressal plays a pivotal role in resolving issues faced by customers quickly and creates trust on brand
+
+   Establishing trust with customers is crucial for a new company entering the market. An effective platform for addressing and resolving customer grievances is vital in maintaining that trust and ensuring that issues are quickly and efficiently addressed. This helps build confidence in the brand.
 
 ![image](UIAutomation/defectVideo/GrievanceRedressalPolicy.gif)
 
-2. OTP field vanishes if user repeatedly submits empty or incomplete OTP
+2. The OTP field disappears if the user repeatedly submits an empty or incomplete one-time password.
 
 ![image](UIAutomation/defectVideo/OTPFieldVanish.gif)
   
