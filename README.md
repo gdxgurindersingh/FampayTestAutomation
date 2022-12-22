@@ -1,5 +1,6 @@
-# FamPay Test Automation Task - 
-##Ten main sanity test cases to consider 
+# FamPay Test Automation Task
+
+## Ten main sanity test cases to consider 
 
 1. Verify that the app launches correctly, and the initial screen is displayed as expected. 
 2. Verify that the login screen is displayed correctly and that the user can enter their credentials and log in to the app. 
@@ -13,7 +14,7 @@
 9. Verify that the app handles network connectivity issues gracefully and displays appropriate error messages.
 10. Verify that the app handles unexpected errors and crashes gracefully and displays appropriate error messages.
 
-##Ten general negative test ideas to consider
+## Ten general negative test ideas to consider
 
 1. Verify that the app handles invalid login credentials correctly and displays an appropriate error message.
 2. Verify that the app handles attempts to perform transactions with insufficient funds correctly and displays an appropriate error message.
@@ -26,9 +27,9 @@
 9. Verify that the app handles input validation correctly and displays an appropriate error message when the user enters invalid data.
 10. Verify that the app handles attempts to exceed maximum length or size limits for input fields correctly and displays an appropriate error message.
 
-##App automation testing framework (Android and iOS) - supports both cucumber and testng tests
+## App automation testing framework (Android and iOS) - supports both cucumber and testng tests
 
-*Single code base framework to test android and iOS app using appium.
+* Single code base framework to test android and iOS app using appium.
 ## Prerequisites:
 
 - Appium server installed on the machine. In case not, install it by running command `npm install -g appium`. For more details visit: https://appium.io/docs/en/about-appium/getting-started/?lang=en
