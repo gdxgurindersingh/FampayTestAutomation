@@ -8,7 +8,7 @@ public abstract class LoginCoreLogic {
 
 
 
-	public abstract void verifyLoginScenario(String userName, String password)
+	public abstract void verifyLoginScenario(String mobileNumber)
 			throws InterruptedException;
 
 

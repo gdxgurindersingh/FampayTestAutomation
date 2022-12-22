@@ -32,56 +32,16 @@ public class LoginSteps {
 
 
 
-    @And("user has \"([^\"]*)\" username and password")
+    @And("user has \"([^\"]*)\" mobile number")
     public void usernameAndPasswordIs(String credentialsValidations) {
         if(credentialsValidations.equalsIgnoreCase("valid")){
-            userName = configFileObject.getProperty("userName");
-            password = configFileObject.getProperty("password");
+            userName = configFileObject.getProperty("mobileNumber");
         }
         else{
-            userName = configFileObject.getProperty("abc@gmail.com");
-            password = configFileObject.getProperty("password");
+            //send out invalid number
         }
     }
 
-    @When("user enters credentials")
-    public void userEntersCredentials() {
-        androidLoginScreen.waitForVisibility(androidLoginScreen.loginViaSlideShare);
-        androidLoginScreen.findElement(androidLoginScreen.loginViaSlideShare).click();
-        androidLoginScreen.waitForVisibility(androidLoginScreen.userName);
-        androidLoginScreen.findElement(androidLoginScreen.userName).sendKeys(userName);
-        androidLoginScreen.findElement(androidLoginScreen.password).sendKeys(password);
-    }
-
-    @And("taps on \"([^\"]*)\" button")
-    public void tapsOnButton(String arg0) {
-        androidLoginScreen.findElement(androidLoginScreen.signInButton).click();
-
-
-    }
-
-    @Then("\"([^\"]*)\" button should be visible")
-    public void buttonShouldBeVisible(String button) {
-        //	verify if "Get Started" button is displayed
-        if(button.equalsIgnoreCase("Get Started")) {
-            androidLoginScreen.waitForVisibility(androidLoginScreen.startedButton);
-            androidLoginScreen.findElement(androidLoginScreen.startedButton).click();
-            androidLoginScreen.waitForVisibility(androidLoginScreen.titleBar);
-        }
-    }
-
-    @And("user should be able to scroll")
-    public void userShouldBeAbleToScroll() {
-        // scroll down twice with each duration of 500 ms
-        androidLoginScreen.scrollDown(2, 500);
-        androidLoginScreen.waitForVisibility(androidLoginScreen.searchIcon);
-    }
-
-    @And("long press the search icon")
-    public void longPressTheSearchIcon() {
-        // long press search icon
-        androidLoginScreen.longPress(androidLoginScreen.searchIcon);
-    }
 
 
 

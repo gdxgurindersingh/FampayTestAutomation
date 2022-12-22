@@ -131,10 +131,10 @@ public class CreateSession  {
 	public synchronized void androidDriver(String buildPath, Method methodName) throws MalformedURLException{
 		File app = new File(buildPath);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("deviceName", "Android Emulator");
+		capabilities.setCapability("deviceName", "OneTwo");
 		capabilities.setCapability("platformName","Android");
 		capabilities.setCapability("appPackage", "com.fampay.in");
-		capabilities.setCapability("appActivity", "com.fampay.in.ui.splash.SplashActivity ");
+//		capabilities.setCapability("appActivity", "com.fampay.in/.ui.splash.SplashActivity");
 		capabilities.setCapability("name", methodName.getName());
 		capabilities.setCapability("app", app.getAbsolutePath());
 		// added "MobileCapabilityType.FULL_RESET" capability to start app in fresh state (logout).

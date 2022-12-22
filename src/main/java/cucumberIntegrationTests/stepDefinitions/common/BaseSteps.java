@@ -15,12 +15,12 @@ public class BaseSteps {
     IOSLoginScreen iosLoginScreen;
 
 
-    @Given("^User has slideshare \"([^\"]*)\" app$")
-    public void userHasSlideshareApp(String invokeDriver) throws Exception {
+    @Given("^User has fampay \"([^\"]*)\" app$")
+    public void userHasFampayApp(String invokeDriver) throws Exception {
 
         platform = invokeDriver;
         createSessionCucumber = new CreateSessionCucumber();
-        createSessionCucumber.createDriver(invokeDriver, BaseSteps.class.getDeclaredMethod("userHasSlideshareApp",String.class));
+        createSessionCucumber.createDriver(invokeDriver, BaseSteps.class.getDeclaredMethod("userHasFampayApp",String.class));
         driver = createSessionCucumber.getWebDriver();
 
         if (invokeDriver.equalsIgnoreCase("android")) {

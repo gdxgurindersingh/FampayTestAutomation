@@ -15,7 +15,6 @@ import IntegrationTests.coreLogic.base.*;
 public class AndroidLoginCoreLogic extends LoginCoreLogic {
     AndroidLoginScreen androidLoginScreen;
 
-
     public AndroidLoginCoreLogic(WebDriver driver) {
         androidLoginScreen = new AndroidLoginScreen(driver);
     }
@@ -23,39 +22,28 @@ public class AndroidLoginCoreLogic extends LoginCoreLogic {
     /**
      * method to login to android app
      *
-     * @param userName emailId to be used for login
-     * @param password - valid password
+     * @param mobileNumber mobile Number to be used for login
      */
     @Override
-    public void verifyLoginScenario(String userName, String password) throws InterruptedException {
-        androidLoginScreen.waitForVisibility(androidLoginScreen.loginViaSlideShare);
-        androidLoginScreen.findElement(androidLoginScreen.loginViaSlideShare).click();
-        androidLoginScreen.waitForVisibility(androidLoginScreen.userName);
-        androidLoginScreen.findElement(androidLoginScreen.userName).sendKeys(userName);
-        androidLoginScreen.findElement(androidLoginScreen.password).sendKeys(password);
-        androidLoginScreen.findElement(androidLoginScreen.signInButton).click();
+    public void verifyLoginScenario(String mobileNumber) throws InterruptedException {
+        androidLoginScreen.waitForVisibility(androidLoginScreen.enterFampay);
+        androidLoginScreen.findElement(androidLoginScreen.enterFampay).click();
+        androidLoginScreen.waitForVisibility(androidLoginScreen.phoneNumber);
+        androidLoginScreen.findElement(androidLoginScreen.phoneNumber).sendKeys(mobileNumber);
+        androidLoginScreen.hideKeyboard();
+        androidLoginScreen.waitForVisibility(androidLoginScreen.getOTP);
+        androidLoginScreen.findElement(androidLoginScreen.getOTP).click();
 
+        androidLoginScreen.hideKeyboard();
 
-
-        //	verify if "Get Started" button is displayed
-        androidLoginScreen.waitForVisibility(androidLoginScreen.startedButton);
+        //	verify if User Icon is displayed
+        androidLoginScreen.waitForVisibility(androidLoginScreen.userIcon);
         Log.info("Login Successful");
-        androidLoginScreen.findElement(androidLoginScreen.startedButton).click();
-        androidLoginScreen.waitForVisibility(androidLoginScreen.titleBar);
+
+        androidLoginScreen.findElement(androidLoginScreen.userIcon).click();
 
         // scroll down twice with each duration of 500 ms
         androidLoginScreen.scrollDown(2, 500);
-        androidLoginScreen.waitForVisibility(androidLoginScreen.searchIcon);
-
-        // long press search icon
-        androidLoginScreen.longPress(androidLoginScreen.searchIcon);
-
-        // press back key
-        androidLoginScreen.back();
-
-        // below code will enable airplane mode on the device
-        //  androidLoginScreen.setNetworkConnection(true,false,false);
-
     }
 
 

@@ -1,0 +1,54 @@
+21 Dec 2022 09:37:32  INFO logger - Appium started on http://0.0.0.0:22770/wd/hub
+21 Dec 2022 09:37:32  INFO logger - Appium server started successfully
+21 Dec 2022 09:37:32  INFO logger - Appium server stopped
+21 Dec 2022 09:37:32  INFO logger - Appium server stopped successfully
+21 Dec 2022 10:23:32  INFO logger - Appium started on http://0.0.0.0:8004/wd/hub
+21 Dec 2022 10:23:32  INFO logger - Appium server started successfully
+21 Dec 2022 10:23:32  INFO logger - --------------------------------------
+21 Dec 2022 10:24:01  INFO logger - Appium server stopped
+21 Dec 2022 10:24:01  INFO logger - Appium server stopped successfully
+21 Dec 2022 10:32:38  INFO logger - Appium started on http://0.0.0.0:17409/wd/hub
+21 Dec 2022 10:32:38  INFO logger - Appium server started successfully
+21 Dec 2022 10:32:38  INFO logger - --------------------------------------
+21 Dec 2022 10:32:44  INFO logger - Android driver created
+21 Dec 2022 10:32:44  INFO logger - Running login test
+21 Dec 2022 10:33:26  INFO logger - Login Successful
+21 Dec 2022 10:33:39  INFO logger - Long press successful on element: [[io.appium.java_client.android.AndroidDriver, Capabilities: {app=C:\Users\win10\IdeaProjects\FampayTestAutomation\src\main\java\app\SSapp.apk, appActivity=net.slideshare.mobile.ui.SplashActivity, appPackage=net.slideshare.mobile, automationName=UiAutomator2, databaseEnabled=false, desired={platformName=android, name=LoginVerification, app=C:\Users\win10\IdeaProjects\FampayTestAutomation\src\main\java\app\SSapp.apk, appActivity=net.slideshare.mobile.ui.SplashActivity, appPackage=net.slideshare.mobile, automationName=UiAutomator2, deviceName=Android Emulator}, deviceApiLevel=30, deviceManufacturer=OnePlus, deviceModel=HD1901, deviceName=345bb936, deviceScreenDensity=450, deviceScreenSize=1080x2400, deviceUDID=345bb936, javascriptEnabled=true, locationContextEnabled=false, name=LoginVerification, networkConnectionEnabled=true, pixelRatio=2.8125, platform=LINUX, platformName=Android, platformVersion=11, statBarHeight=80, takesScreenshot=true, viewportRect={left=0, top=80, width=1080, height=2207}, warnings={}, webStorageEnabled=false}] -> id: net.slideshare.mobile:id/action_search]
+21 Dec 2022 10:33:40  INFO logger - Verified the login
+21 Dec 2022 10:33:40  INFO logger - Shutting down driver
+21 Dec 2022 10:33:40  INFO logger - Appium server stopped
+21 Dec 2022 10:33:40  INFO logger - Appium server stopped successfully
+21 Dec 2022 10:35:08  INFO logger - Appium started on http://0.0.0.0:11428/wd/hub
+21 Dec 2022 10:35:08  INFO logger - Appium server started successfully
+21 Dec 2022 10:35:09  INFO logger - --------------------------------------
+21 Dec 2022 10:35:14  INFO logger - Android driver created
+21 Dec 2022 10:35:14  INFO logger - Running login test
+21 Dec 2022 10:35:49  INFO logger - Appium started on http://0.0.0.0:31355/wd/hub
+21 Dec 2022 10:35:49  INFO logger - Appium server started successfully
+21 Dec 2022 10:35:49  INFO logger - --------------------------------------
+21 Dec 2022 10:36:03  INFO logger - Android driver created
+21 Dec 2022 10:36:03  INFO logger - Running login test
+21 Dec 2022 10:36:18  INFO logger - Login Successful
+21 Dec 2022 10:36:31  INFO logger - Long press successful on element: [[io.appium.java_client.android.AndroidDriver, Capabilities: {app=C:\Users\win10\IdeaProjects\FampayTestAutomation\src\main\java\app\SSapp.apk, appActivity=net.slideshare.mobile.ui.SplashActivity, appPackage=net.slideshare.mobile, automationName=UiAutomator2, databaseEnabled=false, desired={platformName=android, name=LoginVerification, app=C:\Users\win10\IdeaProjects\FampayTestAutomation\src\main\java\app\SSapp.apk, appActivity=net.slideshare.mobile.ui.SplashActivity, appPackage=net.slideshare.mobile, automationName=UiAutomator2, deviceName=Android Emulator, fullReset=true}, deviceApiLevel=30, deviceManufacturer=OnePlus, deviceModel=HD1901, deviceName=345bb936, deviceScreenDensity=450, deviceScreenSize=1080x2400, deviceUDID=345bb936, fullReset=true, javascriptEnabled=true, locationContextEnabled=false, name=LoginVerification, networkConnectionEnabled=true, pixelRatio=2.8125, platform=LINUX, platformName=Android, platformVersion=11, statBarHeight=80, takesScreenshot=true, viewportRect={left=0, top=80, width=1080, height=2207}, warnings={}, webStorageEnabled=false}] -> id: net.slideshare.mobile:id/action_search]
+21 Dec 2022 10:36:33  INFO logger - Verified the login
+21 Dec 2022 10:36:33  INFO logger - Shutting down driver
+21 Dec 2022 10:36:34  INFO logger - Appium server stopped
+21 Dec 2022 10:36:34  INFO logger - Appium server stopped successfully
+22 Dec 2022 16:56:41  INFO logger - Appium started on http://0.0.0.0:20878/wd/hub
+22 Dec 2022 16:56:41  INFO logger - Appium server started successfully
+22 Dec 2022 16:56:41  INFO logger - --------------------------------------
+22 Dec 2022 16:57:04  INFO logger - Android driver created
+22 Dec 2022 16:57:04  INFO logger - Running login test
+22 Dec 2022 16:57:57  INFO logger - Shutting down driver
+22 Dec 2022 16:57:58  INFO logger - Appium server stopped
+22 Dec 2022 16:57:58  INFO logger - Appium server stopped successfully
+22 Dec 2022 16:58:29  INFO logger - Appium started on http://0.0.0.0:8398/wd/hub
+22 Dec 2022 16:58:29  INFO logger - Appium server started successfully
+22 Dec 2022 16:58:29  INFO logger - --------------------------------------
+22 Dec 2022 16:58:45  INFO logger - Android driver created
+22 Dec 2022 16:58:45  INFO logger - Running login test
+22 Dec 2022 16:59:07  INFO logger - Login Successful
+22 Dec 2022 16:59:17  INFO logger - Verified the login
+22 Dec 2022 16:59:17  INFO logger - Shutting down driver
+22 Dec 2022 16:59:19  INFO logger - Appium server stopped
+22 Dec 2022 16:59:19  INFO logger - Appium server stopped successfully

@@ -16,14 +16,7 @@ public class IOSLoginScreen extends GenericMethods {
 	
 
 	// Locators on the login screen of your iOS app should be placed here.
-	
-	
-	/*public By slideShareButtonLabel = By.xpath("//UIAStaticText[contains(@name, 'SlideShare')]");
-	public By slideShareButton = By.xpath("//UIAButton[3]");
-	public By userName = By.xpath("//UIATextField[1]");
-	public By password = By.xpath("//UIASecureTextField[1]");
-	public By signInButton = By.xpath("//UIAButton[contains(@name, 'Sign in')]");
-	public By continueButton = By.xpath("//UIAButton[contains(@name, 'Continue')]");*/
+
 
 }
 

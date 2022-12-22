@@ -20,6 +20,7 @@ public class Log
 	private static FileAppender appender;
 	private static ConsoleAppender consoleAppender;
 	
+
 	static
 	{
 		try 

@@ -36,7 +36,7 @@ public class CreateSessionCucumber {
 	Properties configFile ;
 	protected static Properties lobConfigProp = new Properties();
 	public static Properties localeConfigProp = new Properties();
-	protected FileInputStream configFis, lobConfigFis, localeConfigFis;	
+	protected FileInputStream configFis, lobConfigFis, localeConfigFis;
 	public Properties testDataFile;
 	private final String CONFIG_FILE_PATH="//src//main//java//config//config.properties";
 	protected File file = new File("");
@@ -46,7 +46,7 @@ public class CreateSessionCucumber {
 
 
 
-	/** 
+	/**
 	 * this method starts Appium server. Calls startAppiumServer method to start the session depending upon your OS.
 	 * @throws Exception Unable to start appium server
 	 */
@@ -64,7 +64,7 @@ public class CreateSessionCucumber {
 		}
 	}
 
-	/** 
+	/**
 	 * this method stops Appium server.Calls stopAppiumServer method to 
 	 * stop session depending upon your OS.
 	 * @throws Exception Unable to stop appium server
@@ -83,7 +83,7 @@ public class CreateSessionCucumber {
 	}
 
 
-	/** 
+	/**
 	 * this method creates the driver depending upon the passed parameter (android or iOS)
 	 *  and loads the properties files (config and test data properties files).
 	 * @param os android or iOS
@@ -107,7 +107,7 @@ public class CreateSessionCucumber {
 			androidDriver(buildPath, methodName);
 			Log.info("Android driver created");
 
-		}																		         
+		}
 		else if (os.equalsIgnoreCase("iOS")){
 			String buildPath = choosebuild(os);
 			iOSDriver(buildPath, methodName);
@@ -115,7 +115,7 @@ public class CreateSessionCucumber {
 		}
 	}
 
-	/** 
+	/**
 	 * this method quit the driver after the execution of test(s) 
 	 */
 	//@AfterMethod
@@ -126,7 +126,7 @@ public class CreateSessionCucumber {
 
 
 
-	/** 
+	/**
 	 *  this method creates the android driver
 	 *  @param buildPath - path to pick the location of the app
 	 *  @param methodName - name of the method under execution 
@@ -135,10 +135,10 @@ public class CreateSessionCucumber {
 	public synchronized void androidDriver(String buildPath, Method methodName) throws MalformedURLException{
 		File app = new File(buildPath);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("deviceName", "Android Emulator");
+		capabilities.setCapability("deviceName", "OneTwo");
 		capabilities.setCapability("platformName","Android");
-		capabilities.setCapability("appPackage", "net.slideshare.mobile");
-		capabilities.setCapability("appActivity", "net.slideshare.mobile.ui.SplashActivity");
+		capabilities.setCapability("appPackage", "com.fampay.in");
+//		capabilities.setCapability("appActivity", "com.fampay.in/.ui.splash.SplashActivity");
 		capabilities.setCapability("name", methodName.getName());
 		capabilities.setCapability("app", app.getAbsolutePath());
 		capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
@@ -147,7 +147,7 @@ public class CreateSessionCucumber {
 
 	}
 
-	/** 
+	/**
 	 *  this method creates the iOS driver
 	 *  @param buildPath- path to pick the location of the app
 	 *  @param methodName- name of the method under execution
@@ -160,7 +160,7 @@ public class CreateSessionCucumber {
 		capabilities.setCapability("platformVersion", "8.2");
 		capabilities.setCapability("appiumVersion", "1.3.7");
 		capabilities.setCapability("name", methodName.getName());
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone 5s"); 
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"iPhone 13");
 		capabilities.setCapability("app", app.getAbsolutePath());
 		driver  = new IOSDriver( new URL("http://localhost:4723/wd/hub"), capabilities);
 
@@ -168,7 +168,7 @@ public class CreateSessionCucumber {
 
 
 
-	/** 
+	/**
 	 *  this method starts the appium  server depending on your OS.
 	 * @param os your machine OS (windows/linux/mac)
 	 * @throws IOException Signals that an I/O exception of some sort has occurred
@@ -179,35 +179,35 @@ public class CreateSessionCucumber {
 	 */
 	public void startAppiumServer(String os) throws ExecuteException, IOException, InterruptedException{
 		if (os.contains("windows")){
-			CommandLine command = new CommandLine("cmd");  
-			command.addArgument("/c");  
-			command.addArgument("C:/Program Files/nodejs/node.exe");  
-			command.addArgument("C:/Appium/node_modules/appium/bin/appium.js");  
-			command.addArgument("--address", false);  
-			command.addArgument("127.0.0.1");  
-			command.addArgument("--port", false);  
-			command.addArgument("4723");  
-			command.addArgument("--full-reset", false);  
+			CommandLine command = new CommandLine("cmd");
+			command.addArgument("/c");
+			command.addArgument("C:/Program Files/nodejs/node.exe");
+			command.addArgument("C:/Appium/node_modules/appium/bin/appium.js");
+			command.addArgument("--address", false);
+			command.addArgument("127.0.0.1");
+			command.addArgument("--port", false);
+			command.addArgument("4723");
+			command.addArgument("--full-reset", false);
 
-			DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();  
-			DefaultExecutor executor = new DefaultExecutor();  
-			executor.setExitValue(1);  
-			executor.execute(command, resultHandler);  
-			Thread.sleep(5000);  
+			DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
+			DefaultExecutor executor = new DefaultExecutor();
+			executor.setExitValue(1);
+			executor.execute(command, resultHandler);
+			Thread.sleep(5000);
 		}
 		else if (os.contains("mac os x")){
-			CommandLine command = new CommandLine("/Applications/Appium.app/Contents/Resources/node/bin/node");  
-			command.addArgument("/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js", false);  
-			command.addArgument("--address", false);  
-			command.addArgument("127.0.0.1");  
-			command.addArgument("--port", false);  
-			command.addArgument("4723");  
-			command.addArgument("--full-reset", false);  
-			DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();  
-			DefaultExecutor executor = new DefaultExecutor();  
-			executor.setExitValue(1);  
-			executor.execute(command, resultHandler);  
-			Thread.sleep(5000);  
+			CommandLine command = new CommandLine("/Applications/Appium.app/Contents/Resources/node/bin/node");
+			command.addArgument("/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js", false);
+			command.addArgument("--address", false);
+			command.addArgument("127.0.0.1");
+			command.addArgument("--port", false);
+			command.addArgument("4723");
+			command.addArgument("--full-reset", false);
+			DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
+			DefaultExecutor executor = new DefaultExecutor();
+			executor.setExitValue(1);
+			executor.execute(command, resultHandler);
+			Thread.sleep(5000);
 		}
 		else if (os.contains("linux")){
 			//Start the appium server
@@ -230,7 +230,7 @@ public class CreateSessionCucumber {
 		}
 	}
 
-	/** 
+	/**
 	 *  this method stops the appium  server.
 	 * @param os your machine OS (windows/linux/mac).
 	 * @throws IOException Signals that an I/O exception of some sort has occurred. 
@@ -238,26 +238,26 @@ public class CreateSessionCucumber {
 	 */
 	public void stopAppiumServer(String os) throws ExecuteException, IOException {
 		if (os.contains("windows")){
-			CommandLine command = new CommandLine("cmd");  
-			command.addArgument("/c");  
-			command.addArgument("Taskkill /F /IM node.exe");  
+			CommandLine command = new CommandLine("cmd");
+			command.addArgument("/c");
+			command.addArgument("Taskkill /F /IM node.exe");
 
-			DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();  
-			DefaultExecutor executor = new DefaultExecutor();  
-			executor.setExitValue(1);  
-			executor.execute(command, resultHandler);  
+			DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
+			DefaultExecutor executor = new DefaultExecutor();
+			executor.setExitValue(1);
+			executor.execute(command, resultHandler);
 		}
 		else if (os.contains("mac os x")){
-			String[] command ={"/usr/bin/killall","-KILL","node"};  
-			Runtime.getRuntime().exec(command);  
-			Log.info("Appium server stopped");  
+			String[] command ={"/usr/bin/killall","-KILL","node"};
+			Runtime.getRuntime().exec(command);
+			Log.info("Appium server stopped");
 		}
 		else if (os.contains("linux")){
 			// need to add it
 		}
 	}
 
-	/** 
+	/**
 	 *  this method loads properties files config and file having test data.
 	 * @param platform android or ios, to load specific test data file.
 	 * @throws Exception property files are not loaded successfully
@@ -280,7 +280,7 @@ public class CreateSessionCucumber {
 			localeConfigFis = new FileInputStream(file.getAbsoluteFile()
 					+ "//src//main//java//testData//" + locale + "_" + platform  + ".properties");
 			localeConfigProp.load(localeConfigFis);
-		} 
+		}
 		else {
 			throw new Exception("Properties files loading failed ");
 		}}
@@ -303,8 +303,6 @@ public class CreateSessionCucumber {
 	public WebDriver getWebDriver(){
 		return this.driver;
 	}
-
-
 
 }
 
