@@ -35,7 +35,7 @@ Key findings
    Use the option - fstack-protectorall to enable stack canaries. 
    
 Detailed report :
-[embed]https://github.com/gdxgurindersingh/FampayTestAutomation/UIAutomation/MobSF/Fampay2.2.3_ANDROID_STATIC_ANALYSIS_REPORT.pdf[/embed]
+https://github.com/gdxgurindersingh/FampayTestAutomation/UIAutomation/MobSF/Fampay2.2.3_ANDROID_STATIC_ANALYSIS_REPORT.pdf
    
 ## App automation testing framework (Android and iOS) - supports both cucumber and testng tests
 
