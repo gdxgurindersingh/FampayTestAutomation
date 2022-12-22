@@ -1,4 +1,32 @@
-# FamPay Test Automation Task - App automation testing framework (Android and iOS) - supports both cucumber and testng tests
+# FamPay Test Automation Task - 
+##Ten main sanity test cases to consider 
+
+1. Verify that the app launches correctly, and the initial screen is displayed as expected. 
+2. Verify that the login screen is displayed correctly and that the user can enter their credentials and log in to the app. 
+3. Verify that the user can navigate to different screens within the app, such as the home screen, the account screen, and the transactions screen.
+4. Verify that the user can perform basic transactions, such as sending and receiving money, and that the transactions are reflected correctly in the app.
+5. Verify that the user can view their account details and transaction history.
+6. Verify that the user can view Fampay coin details and redeem them (Critically high complaints/feedback on Playstore)
+6. Verify that the user can add and redeem money from Fampay account.
+7. Verify that the user can change their account settings, such as their profile info and security questions.
+8. Verify that the user can receive and view notifications from the app.
+9. Verify that the app handles network connectivity issues gracefully and displays appropriate error messages.
+10. Verify that the app handles unexpected errors and crashes gracefully and displays appropriate error messages.
+
+##Ten general negative test ideas to consider
+
+1. Verify that the app handles invalid login credentials correctly and displays an appropriate error message.
+2. Verify that the app handles attempts to perform transactions with insufficient funds correctly and displays an appropriate error message.
+3. Verify that the app handles attempts to add an invalid UPI correctly and displays an appropriate error message.
+4. Verify that the app handles attempts to change UPI with an incorrect UPI correctly and displays an appropriate error message.
+5. Verify that the app handles attempts to perform a transaction with an inactive or removed UPI correctly and displays an appropriate error message.
+6. Verify that the app handles attempts to access a restricted feature without the required permissions correctly and displays an appropriate error message.
+7. Verify that the app handles network connectivity issues correctly and displays an appropriate error message.
+8. Verify that the app handles unexpected errors and crashes gracefully and displays an appropriate error message.
+9. Verify that the app handles input validation correctly and displays an appropriate error message when the user enters invalid data.
+10. Verify that the app handles attempts to exceed maximum length or size limits for input fields correctly and displays an appropriate error message.
+
+##App automation testing framework (Android and iOS) - supports both cucumber and testng tests
 
 *Single code base framework to test android and iOS app using appium.
 ## Prerequisites:
