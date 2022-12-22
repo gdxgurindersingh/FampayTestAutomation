@@ -27,6 +27,17 @@
 9. Verify that the app handles input validation correctly and displays an appropriate error message when the user enters invalid data.
 10. Verify that the app handles attempts to exceed maximum length or size limits for input fields correctly and displays an appropriate error message.
 
+## Fampay UI UX Discrepancies
+1. Broken grievance page
+   As a fresh face, wining trust of users is most important. A platform for grievance redressal plays a pivotal role in resolving issues faced by customers quickly and creates trust on brand
+
+![image](UIAutomation/defectVideo/GrievanceRedressalPolicy.gif)
+
+2. OTP field vanishes if user repeatedly submits empty or incomplete OTP
+
+![image](UIAutomation/defectVideo/OTPFieldVanish.gif)
+  
+
 ## Bonus : ANDROID STATIC ANALYSIS REPORT - Fampay v2.2.3
 Key findings
 1. High Severity : Firebase DB is exposed publicly. (https://fampayandroid.firebaseio.com/.json)
