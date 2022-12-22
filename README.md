@@ -27,6 +27,16 @@
 9. Verify that the app handles input validation correctly and displays an appropriate error message when the user enters invalid data.
 10. Verify that the app handles attempts to exceed maximum length or size limits for input fields correctly and displays an appropriate error message.
 
+## Bonus : ANDROID STATIC ANALYSIS REPORT - Fampay v2.2.3
+Key findings
+1. High Severity : Firebase DB is exposed publicly. (https://fampayandroid.firebaseio.com/.json)
+2. High Severity : Multiple shared objects does not have a stack canary value added to the stack. 
+   Stack canaries are used to detect and prevent exploits from overwriting return address. 
+   Use the option - fstack-protectorall to enable stack canaries. 
+   
+Detailed report :
+[embed]https://github.com/gdxgurindersingh/FampayTestAutomation/UIAutomation/MobSF/Fampay2.2.3_ANDROID_STATIC_ANALYSIS_REPORT.pdf[/embed]
+   
 ## App automation testing framework (Android and iOS) - supports both cucumber and testng tests
 
 * Single code base framework to test android and iOS app using appium.
